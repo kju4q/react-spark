@@ -3,10 +3,10 @@ import React from "react";
 interface InputProps {
   type?: "text" | "password" | "email" | "number";
   placeholder?: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   label?: string;
-  name: string;
+  name?: string;
   className?: string;
 }
 

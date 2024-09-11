@@ -5,6 +5,7 @@ interface ButtonProps {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "outline";
   size?: "small" | "medium" | "large";
+  className?: string;
 }
 
 const Button = ({
