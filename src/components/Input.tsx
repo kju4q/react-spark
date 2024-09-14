@@ -1,7 +1,7 @@
 import React from "react";
 
 interface InputProps {
-  type?: "text" | "password" | "email" | "number";
+  type?: "text" | "password" | "email" | "number" | "textarea";
   placeholder?: string;
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;

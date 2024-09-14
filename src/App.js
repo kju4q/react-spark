@@ -1,13 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Input, Card, Button, Layout } from "./components";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 import "./styles/styles.scss";
 
 const App = () => {
   return (
     <Router>
-      <HomePage />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
     </Router>
   );
 };
