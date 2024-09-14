@@ -42,9 +42,6 @@ const HomePage = () => {
             </Button>
           </Card>
         </main>
-        <footer className="text-center text-gray-500">
-          <p>© 2023 ReactSpark. All rights reserved.</p>
-        </footer>
       </div>
     </Layout>
   );
