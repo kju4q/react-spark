@@ -1,14 +1,14 @@
 import React from "react";
 
 type TableColumn<T> = {
-  header: string;
-  accessor: keyof T | ((data: T) => React.ReactNode);
+  header?: string;
+  accessor?: keyof T | ((data: T) => React.ReactNode);
   className?: string;
 };
 
 type TableProps<T> = {
   data: T[];
-  columns: TableColumn<T>[];
+  columns?: TableColumn<T>[];
   className?: string;
   tableClassName?: string;
   headerClassName?: string;
@@ -34,7 +34,7 @@ function Table<T extends object>({
       >
         <thead className={`bg-gray-50 ${headerClassName}`}>
           <tr>
-            {columns.map((column, index) => (
+            {columns?.map((column, index) => (
               <th
                 key={index}
                 scope="col"
@@ -50,14 +50,14 @@ function Table<T extends object>({
         <tbody className={`bg-white divide-y divide-gray-200 ${bodyClassName}`}>
           {data.map((row, rowIndex) => (
             <tr key={rowIndex} className={rowClassName}>
-              {columns.map((column, cellIndex) => (
+              {columns?.map((column, cellIndex) => (
                 <td
                   key={cellIndex}
                   className={`px-6 py-4 whitespace-nowrap ${cellClassName}`}
                 >
                   {typeof column.accessor === "function"
                     ? column.accessor(row)
-                    : (row[column.accessor] as React.ReactNode)}
+                    : (row[column.accessor as keyof T] as React.ReactNode)}
                 </td>
               ))}
             </tr>
