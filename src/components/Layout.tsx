@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Footer } from "../components";
-import { Button } from "react-spark-ui";
+import { Button, Footer } from "react-spark-ui";
 
 type LayoutProps = React.PropsWithChildren<{
   // Add any additional props here if needed
