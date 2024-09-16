@@ -3,6 +3,5 @@ export { default as Input } from "./Input";
 export { default as Layout } from "./Layout";
 export { default as Footer } from "./Footer";
 export { default as Card } from "./Card";
-export { default as Button } from "./Button";
 export { default as Menu } from "./Menu";
 export { default as Table } from "./Table";
