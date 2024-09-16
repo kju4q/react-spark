@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import "./styles/styles.scss";
+import "react-spark-ui/dist/index.css";
 
 const App = () => {
   return (

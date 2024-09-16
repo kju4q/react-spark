@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles/styles.scss"; // Add this line if it's not already there
 import "./index.css";
+import "react-spark-ui/dist/index.css";
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
