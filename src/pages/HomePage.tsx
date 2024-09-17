@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Input, Layout, Menu, Table } from "../components";
-import { Button } from "react-spark-ui";
+import { Button, Header } from "react-spark-ui";
 import "../styles/styles.scss";
 
 type User = {
@@ -37,11 +37,11 @@ const HomePage = () => {
         className="mb-8"
       />
       <div className="max-w-4xl mx-auto p-6 font-sans">
-        <header className="text-center mb-12">
+        {/* <Header className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-800">
             Welcome to ReactSpark
           </h1>
-        </header>
+        </Header> */}
         <main className="flex flex-col gap-12">
           <section className="flex flex-col md:flex-row gap-6">
             <Card className="flex-1 bg-white rounded-lg shadow-md p-6">
