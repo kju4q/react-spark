@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, Input, Layout, Menu, Table } from "../components";
-import { Button, Header } from "react-spark-ui";
+import { Card, Layout, Menu, Table } from "../components";
+import { Button, Header, Input } from "react-spark-ui";
 import "../styles/styles.scss";
 
 type User = {
