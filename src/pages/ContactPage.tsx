@@ -1,5 +1,5 @@
-import { Layout, Menu, Card } from "../components";
-import { Button, Input } from "react-spark-ui";
+import { Layout, Menu } from "../components";
+import { Button, Input, Card } from "react-spark-ui";
 
 const ContactPage = () => {
   const menuItems = [
