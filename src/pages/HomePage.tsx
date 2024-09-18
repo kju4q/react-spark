@@ -1,5 +1,7 @@
-import { Menu, Table } from "../components";
-import { Button, Header, Input, Card, Layout } from "react-spark-ui";
+import { Link } from "react-router-dom";
+import { Table } from "../components";
+import { Button, Input, Card, Layout, Menu } from "react-spark-ui";
+import MenuLink from "../components/MenuLink";
 import "../styles/styles.scss";
 
 type User = {
@@ -28,12 +30,14 @@ const HomePage = () => {
     { header: "Email", accessor: "email" as const },
     { header: "Role", accessor: "role" as const },
   ];
+
   return (
     <Layout>
       <Menu
         items={menuItems}
         logo={<span className="text-xl font-bold">ReactSpark</span>}
         className="mb-8"
+        LinkComponent={MenuLink}
       />
       <div className="max-w-4xl mx-auto p-6 font-sans">
         {/* <Header className="text-center mb-12">

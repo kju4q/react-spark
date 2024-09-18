@@ -1,5 +1,6 @@
-import { Menu } from "../components";
-import { Layout } from "react-spark-ui";
+// import { Menu } from "../components";
+import { Layout, Menu } from "react-spark-ui";
+import MenuLink from "../components/MenuLink";
 
 const AboutPage = () => {
   const menuItems = [
@@ -14,6 +15,7 @@ const AboutPage = () => {
         items={menuItems}
         logo={<span className="text-xl font-bold">ReactSpark</span>}
         className="mb-8"
+        LinkComponent={MenuLink}
       />
       <div className="max-w-4xl mx-auto p-6 font-sans">
         <h1 className="text-4xl font-bold text-gray-800 mb-6">About Us</h1>
