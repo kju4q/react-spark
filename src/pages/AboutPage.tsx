@@ -1,5 +1,5 @@
-import React from "react";
-import { Layout, Menu } from "../components";
+import { Menu } from "../components";
+import { Layout } from "react-spark-ui";
 
 const AboutPage = () => {
   const menuItems = [
