@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { Table } from "../components";
-import { Button, Input, Card, Layout, Menu } from "react-spark-ui";
+import { Button, Input, Card, Layout, Menu, Table } from "react-spark-ui";
 import MenuLink from "../components/MenuLink";
 import "../styles/styles.scss";
 
