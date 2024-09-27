@@ -1,4 +1,6 @@
 // import { Menu } from "../components";
+// TODO: Remove about page and contact page from react spark, and find a solution for the menu
+
 import { Layout, Menu } from "react-spark-ui";
 import MenuLink from "../components/MenuLink";
 
