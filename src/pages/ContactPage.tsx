@@ -9,7 +9,7 @@ const ContactPage = () => {
   ];
 
   return (
-    <Layout>
+    <>
       <Menu
         items={menuItems}
         logo={<span className="text-xl font-bold">ReactSpark</span>}
@@ -51,7 +51,7 @@ const ContactPage = () => {
           </form>
         </Card>
       </div>
-    </Layout>
+    </>
   );
 };
 

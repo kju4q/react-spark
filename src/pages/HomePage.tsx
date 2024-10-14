@@ -17,18 +17,36 @@ const HomePage = () => {
     { label: "Contact", path: "/contact" },
   ];
 
+  const user: User = {
+    id: 1,
+    name: "John Doe",
+    email: "john@example.com",
+    role: "User",
+  };
+
   return (
-    <Layout>
+    <>
       <Menu
         items={menuItems}
         logo={<span className="text-xl font-bold">ReactSpark</span>}
-        className="mb-8"
+        className="w-64"
         LinkComponent={MenuLink}
       />
-      <div className="max-w-4xl mx-auto p-6 font-sans">
-        <main className="flex flex-col gap-12"></main>
+      <div className="flex-grow flex flex-col">
+        <div className="flex justify-end items-center p-4 bg-gray-100">
+          <span className="mr-2">{user.name}</span>
+          <img
+            src="https://example.com/avatar.jpg"
+            alt={user.name}
+            className="w-8 h-8 rounded-full"
+          />
+        </div>
+        <hr className="border-t border-gray-200" />
+        <div className="flex-grow p-8">
+          <h2>Welcome to home page</h2>
+        </div>
       </div>
-    </Layout>
+    </>
   );
 };
 

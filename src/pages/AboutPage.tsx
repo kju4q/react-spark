@@ -12,7 +12,7 @@ const AboutPage = () => {
   ];
 
   return (
-    <Layout>
+    <>
       <Menu
         items={menuItems}
         logo={<span className="text-xl font-bold">ReactSpark</span>}
@@ -35,7 +35,7 @@ const AboutPage = () => {
           interfaces.
         </p>
       </div>
-    </Layout>
+    </>
   );
 };
 
