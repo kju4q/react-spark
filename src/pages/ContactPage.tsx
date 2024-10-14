@@ -44,6 +44,7 @@ const ContactPage = () => {
             <Button
               onClick={() => alert("Message sent!")}
               className="btn-primary"
+              disabled
             >
               Send Message
             </Button>
