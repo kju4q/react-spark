@@ -26,24 +26,27 @@ const HomePage = () => {
 
   return (
     <>
-      <Menu
-        items={menuItems}
-        logo={<span className="text-xl font-bold">ReactSpark</span>}
-        className="w-64"
-        LinkComponent={MenuLink}
-      />
-      <div className="flex-grow flex flex-col">
-        <div className="flex justify-end items-center p-4 bg-gray-100">
-          <span className="mr-2">{user.name}</span>
-          <img
-            src="https://example.com/avatar.jpg"
-            alt={user.name}
-            className="w-8 h-8 rounded-full"
-          />
-        </div>
-        <hr className="border-t border-gray-200" />
-        <div className="flex-grow p-8">
-          <h2>Welcome to home page</h2>
+      <div className="flex">
+        <Menu
+          items={menuItems}
+          logo={<span className="text-xl font-bold">ReactSpark</span>}
+          className="w-64"
+          LinkComponent={MenuLink}
+        />
+        <div className="flex-grow flex flex-col">
+          <div className="flex justify-end items-center p-4 ">
+            <span className="mr-2">{user.name}</span>
+            <img
+              src="https://example.com/avatar.jpg"
+              alt={user.name}
+              className="w-8 h-8 rounded-full"
+            />
+          </div>
+          <hr style={{ borderColor: "#F0F2F5" }} />
+          <div className="flex-grow p-8">
+            <h2>Welcome to home page</h2>
+          </div>
+          last month wip
         </div>
       </div>
     </>
