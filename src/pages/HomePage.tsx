@@ -1,4 +1,4 @@
-import { Button, Input, Card, Layout, Menu } from "react-spark-ui";
+import { Menu } from "react-spark-ui";
 import MenuLink from "../components/MenuLink";
 import "../styles/styles.scss";
 import "react-spark-ui/dist/index.css";
@@ -37,9 +37,13 @@ const HomePage = () => {
           <div className="flex justify-end items-center p-4 ">
             <span className="mr-2">{user.name}</span>
             <img
-              src="https://example.com/avatar.jpg"
+              src="https://api.dicebear.com/6.x/lorelei/png?seed=SparkAnime" // Anime-style avatar API
               alt={user.name}
               className="w-8 h-8 rounded-full"
+              loading="lazy"
+              onError={(e) =>
+                (e.currentTarget.src = "https://via.placeholder.com/32")
+              }
             />
           </div>
           <hr style={{ borderColor: "#F0F2F5" }} />
