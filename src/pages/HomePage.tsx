@@ -1,4 +1,5 @@
 import { Menu } from "react-spark-ui";
+import { menuItems } from "../utils/menuConfig";
 import MenuLink from "../components/MenuLink";
 import "../styles/styles.scss";
 import "react-spark-ui/dist/index.css";
@@ -11,12 +12,6 @@ type User = {
 };
 
 const HomePage = () => {
-  const menuItems = [
-    { label: "Home", path: "/" },
-    { label: "About", path: "/about" },
-    { label: "Contact", path: "/contact" },
-  ];
-
   const user: User = {
     id: 1,
     name: "John Doe",
