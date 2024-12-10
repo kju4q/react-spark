@@ -1,13 +1,8 @@
-import { Button, Input, Card, Layout, Menu } from "react-spark-ui";
+import { Button, Input, Card, Menu } from "react-spark-ui";
 import MenuLink from "../components/MenuLink";
+import { menuItems } from "../utils/menuConfig";
 
 const ContactPage = () => {
-  const menuItems = [
-    { label: "Home", path: "/" },
-    { label: "About", path: "/about" },
-    { label: "Contact", path: "/contact" },
-  ];
-
   return (
     <>
       <Menu

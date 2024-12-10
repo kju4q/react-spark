@@ -3,14 +3,9 @@
 
 import { Menu } from "react-spark-ui";
 import MenuLink from "../components/MenuLink";
+import { menuItems } from "../utils/menuConfig";
 
 const AboutPage = () => {
-  const menuItems = [
-    { label: "Home", path: "/" },
-    { label: "About", path: "/about" },
-    { label: "Contact", path: "/contact" },
-  ];
-
   return (
     <>
       <Menu
