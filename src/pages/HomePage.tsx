@@ -1,18 +1,12 @@
 import { Menu } from "react-spark-ui";
 import { menuItems } from "../utils/menuConfig";
 import MenuLink from "../components/MenuLink";
+import UserProfile from "../components/UserProfile";
 import "../styles/styles.scss";
 import "react-spark-ui/dist/index.css";
 
-type User = {
-  id: number;
-  name: string;
-  email: string;
-  role: string;
-};
-
 const HomePage = () => {
-  const user: User = {
+  const user = {
     id: 1,
     name: "John Doe",
     email: "john@example.com",
@@ -29,18 +23,7 @@ const HomePage = () => {
           LinkComponent={MenuLink}
         />
         <div className="flex-grow flex flex-col">
-          <div className="flex justify-end items-center p-4 ">
-            <span className="mr-2">{user.name}</span>
-            <img
-              src="https://api.dicebear.com/6.x/lorelei/png?seed=SparkAnime" // Anime-style avatar API
-              alt={user.name}
-              className="w-8 h-8 rounded-full"
-              loading="lazy"
-              onError={(e) =>
-                (e.currentTarget.src = "https://via.placeholder.com/32")
-              }
-            />
-          </div>
+          <UserProfile user={user} />
           <hr style={{ borderColor: "#F0F2F5" }} />
           <div className="flex-grow p-8">
             <h2>Welcome to home page</h2>
