@@ -4,8 +4,16 @@
 import { Menu } from "react-spark-ui";
 import MenuLink from "../components/MenuLink";
 import { menuItems } from "../utils/menuConfig";
+import UserProfile from "../components/UserProfile";
 
 const AboutPage = () => {
+  const user = {
+    id: 1,
+    name: "John Doe",
+    email: "john@example.com",
+    role: "User",
+  };
+
   return (
     <>
       <Menu
@@ -15,6 +23,9 @@ const AboutPage = () => {
         LinkComponent={MenuLink}
       />
       <div className="max-w-4xl mx-auto p-6 font-sans">
+        <UserProfile user={user} />
+        <hr style={{ borderColor: "#F0F2F5" }} />
+
         <h1 className="text-4xl font-bold text-gray-800 mb-6">About Us</h1>
         <p className="text-gray-600 mb-4">
           Welcome to ReactSpark! We are a passionate team dedicated to creating
