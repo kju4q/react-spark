@@ -4,11 +4,13 @@ import "./styles/styles.scss"; // Add this line if it's not already there
 import "./index.css";
 import "react-spark-ui/dist/index.css";
 import App from "./App";
-
+import { UserProvider } from "./hooks/useUser";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <UserProvider>
+      <App />
+    </UserProvider>
   </React.StrictMode>
 );
 
