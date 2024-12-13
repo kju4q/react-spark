@@ -4,6 +4,7 @@ import MenuLink from "../components/MenuLink";
 import UserProfile from "../components/UserProfile";
 import "../styles/styles.scss";
 import "react-spark-ui/dist/index.css";
+// TODO: Put the user on context and use it on other pages
 
 const HomePage = () => {
   const user = {
