@@ -1,19 +1,10 @@
-// import { Menu } from "../components";
 // TODO: Remove about page and contact page from react spark, and find a solution for the menu
-
 import { Menu } from "react-spark-ui";
 import MenuLink from "../components/MenuLink";
 import { menuItems } from "../utils/menuConfig";
-import UserProfile from "../components/UserProfile";
+import PageLayout from "../components/PageLayout";
 
 const AboutPage = () => {
-  const user = {
-    id: 1,
-    name: "John Doe",
-    email: "john@example.com",
-    role: "User",
-  };
-
   return (
     <div className="flex">
       <Menu
@@ -22,10 +13,7 @@ const AboutPage = () => {
         className="mb-8"
         LinkComponent={MenuLink}
       />
-      <div className="flex-grow flex flex-col">
-        <UserProfile user={user} />
-        <hr style={{ borderColor: "#F0F2F5" }} />
-
+      <PageLayout>
         <div className="flex-grow p-8">
           <h1 className="text-4xl font-bold text-gray-800 mb-6">About Us</h1>
           <p className="text-gray-600 mb-4">
@@ -43,7 +31,7 @@ const AboutPage = () => {
             functional user interfaces.
           </p>
         </div>
-      </div>
+      </PageLayout>
     </div>
   );
 };

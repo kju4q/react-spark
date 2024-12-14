@@ -1,15 +1,9 @@
 import { Button, Input, Card, Menu } from "react-spark-ui";
 import MenuLink from "../components/MenuLink";
 import { menuItems } from "../utils/menuConfig";
-import UserProfile from "../components/UserProfile";
-const ContactPage = () => {
-  const user = {
-    id: 1,
-    name: "John Doe",
-    email: "john@example.com",
-    role: "User",
-  };
+import PageLayout from "../components/PageLayout";
 
+const ContactPage = () => {
   return (
     <div className="flex">
       <Menu
@@ -18,9 +12,7 @@ const ContactPage = () => {
         className="mb-8"
         LinkComponent={MenuLink}
       />
-      <div className="flex-grow flex flex-col">
-        <UserProfile user={user} />
-        <hr style={{ borderColor: "#F0F2F5" }} />
+      <PageLayout>
         <div className="flex-grow p-8">
           <h1 className="text-4xl font-bold text-gray-800 mb-6">Contact Us</h1>
           <Card className="bg-white rounded-lg shadow-md p-6">
@@ -56,7 +48,7 @@ const ContactPage = () => {
             </form>
           </Card>
         </div>
-      </div>
+      </PageLayout>
     </div>
   );
 };
