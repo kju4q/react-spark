@@ -12,12 +12,14 @@ const UserContext = createContext<User | null>(null);
 export const UserProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const user = {
+  // Static user data for now
+  const user: User = {
     id: 1,
-    name: "John Doe",
-    email: "john@example.com",
-    role: "User",
+    name: "Qendresa Hoti",
+    email: "your.email@example.com",
+    role: "Admin",
   };
+
   return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
 };
 
